@@ -1,4 +1,7 @@
 #!/bin/bash
+yarn --daemon start resourcemanager
+yarn --daemon start nodemanager
+
 echo "🔍 Checking YARN (Hadoop ResourceManager)..."
 
 # CLI Check
