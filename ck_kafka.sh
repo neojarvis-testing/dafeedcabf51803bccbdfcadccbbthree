@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "🔍 Checking Kafka..."
+ps -ef | grep kafka
+zookeeper-server-start.sh -daemon /opt/kafka/config/zookeeper.properties
 
 # Create a test topic
 kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1 \
